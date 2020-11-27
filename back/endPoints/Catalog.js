@@ -34,4 +34,14 @@ router.get('/id/:id', async (req, res) => {
     }
 })
 
+router.get('/product/:id', async (req, res) => {
+    try {
+        const result = await Catalog.findById(req.params.id).exec()
+        res.status(200).json(result)
+    }
+    catch(err) {
+        res.sendStatus(500)
+    }
+})
+
 module.exports = router

@@ -28,12 +28,16 @@ export default {
 </script>
 
 <style>
+*{
+  box-sizing: border-box;
+}
 body{
   margin:0;
   padding:0;
 }
 html{
   font-size: 14px;
+  scroll-behavior: smooth;
 }
 .home{
   display: flex;
