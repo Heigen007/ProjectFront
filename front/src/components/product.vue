@@ -17,7 +17,7 @@ export default {
     product: Object
   }),
   async mounted () {
-    await axios.get('http://172.20.10.3:3000/Catalog/id/' + this.$route.params.id)
+    await axios.get('http://172.20.10.4:3000/Catalog/id/' + this.$route.params.id)
       .then(response => {
         this.product = response.data
         console.log(this.product)

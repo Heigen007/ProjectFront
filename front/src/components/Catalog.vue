@@ -22,7 +22,7 @@ export default {
     Catalogs: []
   }),
   async mounted () {
-    await axios.get('http://localhost:3000/Catalog')
+    await axios.get('http://172.20.10.4:3000/Catalog')
       .then((response) => {
         this.Catalogs = response.data
         console.log(this.Catalogs)

@@ -22,7 +22,7 @@ export default {
     carouselData: null
   }),
   async mounted () {
-    await axios.get('http://172.20.10.3:3000/HeaderCarousel')
+    await axios.get('http://172.20.10.4:3000/HeaderCarousel')
       .then(response => {
         this.carouselData = response.data
       })
