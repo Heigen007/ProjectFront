@@ -12,15 +12,6 @@ export default {
   name: 'Home',
   components: {
     Header
-  },
-  data: function () {
-    return {
-      root: 'http://localhost:3000/'
-    }
-  },
-  computed: {},
-  watch: {},
-  async beforeMount () {
   }
 }
 </script>
@@ -32,14 +23,10 @@ body{
   padding:0;
   z-index: 10;
 }
-.a {
-  background: url(assets/img.jpg);
-  width: 100%;
-  background-size: cover;
-  height: 100vh;
-  position: fixed;
-  filter: blur(5px);
-  z-index: -10;
-  top:0;
+.home{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 </style>
