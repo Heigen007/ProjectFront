@@ -4,6 +4,7 @@
     <router-view></router-view>
     <onas/>
     <theFooter/>
+    <buy/>
   </div>
 </template>
 
@@ -11,12 +12,14 @@
 import Header from '@/components/Header.vue'
 import theFooter from '@/components/theFooter.vue'
 import onas from '@/components/o-nas.vue'
+import buy from '@/components/buy.vue'
 export default {
   name: 'Home',
   components: {
     Header,
     theFooter,
-    onas
+    onas,
+    buy
   },
   data: function () {
     return {
