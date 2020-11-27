@@ -21,8 +21,9 @@ export default {
 <style lang="sass" scoped>
   @import url('https://fonts.googleapis.com/css2?family=Mulish:ital@1&display=swap')
   .wrapper
+    height: 100vh
     .img
-      height: 65vh
+      height: 100vh
       background-size: cover !important
       display: flex
       flex-direction: column

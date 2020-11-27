@@ -52,7 +52,9 @@ a:hover::after{
 }
 .header{
   height: 90px;
-  background: #8a8a8a;
+  background: rgba(138,138,138,.6);
+  position: fixed;
+  z-index: 1000000;
 }
 .about {
     display: flex;
