@@ -1,8 +1,11 @@
 <template>
   <div class="wrapper">
-    <div class="catalog" v-for="(Catalog, key) in Catalog" :key="key">
-      <img class = "photo item"  :id = "`${key}`" :src = "`../assets/Photo1.jpg`">
-      <img class = "photo item"  :id = "`${key}`" src = "../assets/flow.png">
+    <div class="catalogs"
+      v-for="catalog in Catalogs"
+      :key="catalog.title">
+      <router-link :to="`/${Catalog.id}`" class="catalogTile" :style="{background: 'url(' + require('../assets/' + catalog.image) + ') center no-repeat'}">
+        <div class="title">{{ catalog.title }}</div>
+      </router-link>
     </div>
   </div>
 </template>
@@ -12,39 +15,30 @@ import axios from 'axios'
 export default {
   name: 'Catalog',
   data: () => ({
-    Catalog: Array
+    Catalogs: []
   }),
-  methods: {
-
-  },
-  mounted () {
-    axios.get('http://172.20.10.2:3000/Catalog')
+  async mounted () {
+    await axios.get('http://localhost:3000/Catalog')
       .then((response) => {
-        console.log(response.data)
-        console.log(this.Catalog)
-        this.Catalog = response.data
-        console.log(this.Catalog)
+        this.Catalogs = response.data
+        console.log(this.Catalogs)
+      })
+      .catch(err => {
+        console.log(err)
       })
   }
 }
 </script>
 
-<style  scoped>
-  .wrapper{
-    width: 100%;
-    height: calc(100vh - 100px);
-    background-color: darken(#fff, 6.25%);
-  }
-  .catalog {
-    border: 1px solid red;
-  }
-  .photo {
-    width: 10vw;
-    float: left;
-    margin-left: 15vw;
-    margin-top: 10vh;
-  }
-  .item{
-    width: 20vw;
-  }
+<style lang="sass" scoped>
+  .wrapper
+    width: 100vw
+    height: 100vh
+    background-color: darken(#fff, 6.25%)
+  .catalogs
+    width: 100%
+    height: 100%
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: 1fr 1fr
 </style>
