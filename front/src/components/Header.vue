@@ -4,16 +4,15 @@
   <div class = "buttons">
       <div class="inner-width">
         <nav class="navigation-menu">
-          <a href="#"><i class="fas fa-home home"></i> Home</a>
-          <a href="#"><i class="fas fa-align-left about"></i> About</a>
-          <a href="#"><i class="fab fa-buffer works"></i> Works</a>
+          <a href="#"><i class="fas fa-home home"></i> КАТАЛОГ</a>
+          <a href="#"><i class="fas fa-align-left about"></i> КАТАЛОГ</a>
         </nav>
           <router-link to="/">
             <div class="logo"><img src="../assets/flow.png" alt=""></div>
           </router-link>
         <nav class="navigation-menu">
-          <a href="#"><i class="fas fa-users team"></i> Team</a>
-          <a href="#"><i class="fas fa-headset contact"></i> Contact</a>
+          <a href="#"><i class="fas fa-users team"></i> ДОСТАВКА</a>
+          <a href="#"><i class="fas fa-headset contact"></i> КОНТАКТЫ</a>
         </nav>
       </div>
   </div>
@@ -47,9 +46,14 @@ export default {
   height: 90px;
   background: #8a8a8a;
 }
-
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 .inner-width{
-  max-width: 100vw;
+  width: 100vw;
   padding: 0 10px;
   margin: auto;
 }
@@ -74,7 +78,7 @@ export default {
 }
 
 .navigation-menu a{
-  margin-left: 10px;
+  margin-left: 3vw;
   color: #ddd;
   text-transform: uppercase;
   font-size: 14px;
@@ -83,17 +87,19 @@ export default {
   transition: .3s linear;
   width: 33%;
   text-align:center;
+  font-size: ;
 }
 
 .navigation-menu a:hover{
   background: #fff;
   color: #2f3640;
   transform: scale(1.1);
+  border-bottom: 1px solid red;
 }
 
 .navigation-menu i{
   margin-right: 10px;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .home{
