@@ -2,18 +2,18 @@
   <div class="home">
     <Header/>
     <router-view></router-view>
-    <!-- <Footer/> -->
+    <theFooter/>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header.vue'
-// import Footer from '@/components/theFooter.vue'
+import theFooter from '@/components/theFooter.vue'
 export default {
   name: 'Home',
   components: {
-    Header
-    // Footer
+    Header,
+    theFooter
   }
 }
 </script>
@@ -24,6 +24,9 @@ body{
   margin:0;
   padding:0;
   z-index: 10;
+}
+html{
+  font-size: 14px;
 }
 .home{
   display: flex;
