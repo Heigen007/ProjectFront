@@ -14,6 +14,15 @@ export default {
   components: {
     Header
     // Footer
+  },
+  data: function () {
+    return {
+      root: 'http://localhost:3000/'
+    }
+  },
+  computed: {},
+  watch: {},
+  async beforeMount () {
   }
 }
 </script>
