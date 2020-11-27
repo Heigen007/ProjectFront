@@ -2,6 +2,7 @@
   <div class="home">
     <Header/>
     <router-view></router-view>
+    <onas/>
     <theFooter/>
   </div>
 </template>
@@ -9,11 +10,13 @@
 <script>
 import Header from '@/components/Header.vue'
 import theFooter from '@/components/theFooter.vue'
+import onas from '@/components/o-nas.vue'
 export default {
   name: 'Home',
   components: {
     Header,
-    theFooter
+    theFooter,
+    onas
   },
   data: function () {
     return {
