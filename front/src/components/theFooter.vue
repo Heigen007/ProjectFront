@@ -41,7 +41,7 @@ export default {
 
 <style lang="sass" scoped>
   .wrapper
-    height: 100vh
+    height: 80vh
     width: 100%
     display: flex
     flex-direction: column
