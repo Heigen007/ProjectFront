@@ -30,7 +30,7 @@ export default {
 
 <style lang="sass" scoped>
   .wrapper
-    height: 90vh
+    height: 50vh
     width: 100vw
     background-color: #F4F4F4
     text-align: center
@@ -40,6 +40,7 @@ export default {
       display: flex
       align-items: center
       flex-direction: column
+      padding-top: 40px
       h1
         font-family: Ubuntu,sans-serif,system-ui
         font-weight: 700 !important
@@ -51,6 +52,7 @@ export default {
         display: flex
         flex-direction: row
         justify-content: space-around
+        margin-top: 40px
         .column
           width: 22.5%
           height: 80%
