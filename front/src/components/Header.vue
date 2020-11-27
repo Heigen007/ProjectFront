@@ -1,22 +1,15 @@
 <template>
-<div class = "header">
-
-  <div class = "buttons">
-      <div class="inner-width">
-        <router-link to="/">
-          <div class="logo"><img src="../assets/flow.png" alt="">></div>
-        </router-link>
-        <nav class="navigation-menu">
-          <a href="#"><i class="fas fa-home home"></i> Home</a>
-          <a href="#"><i class="fas fa-align-left about"></i> About</a>
-          <a href="#"><i class="fab fa-buffer works"></i> Works</a>
-          <a href="#"><i class="fas fa-users team"></i> Team</a>
-          <a href="#"><i class="fas fa-headset contact"></i> Contact</a>
-        </nav>
-      </div>
+  <div class = "header">
+    <div class="inner-width">
+      <a href="#"><i class="fas fa-home home"></i> КАТАЛОГ</a>
+      <a href="#"><i class="fas fa-align-left about"></i> КАТАЛОГ</a>
+      <router-link to="/">
+        <div class="logo"><img src="../assets/flow.png" alt=""></div>
+      </router-link>
+      <a href="#"><i class="fas fa-users team"></i> ДОСТАВКА</a>
+      <a href="#"><i class="fas fa-headset contact"></i> КОНТАКТЫ</a>
+    </div>
   </div>
-</div>
-
 </template>
 
 <script>
@@ -36,57 +29,81 @@ export default {
 
 <style scoped>
 *{
-  margin: 0;
-  padding: 0;
+  font-family: "Monotype Corvisa",sans-serif;
+}
+a{
+  color: black;
   text-decoration: none;
-  font-family: "Open Sans",sans-serif;
+  font-size: 1.3rem;
+  position: relative
+}
+a::after{
+  position: absolute;
+  content: '';
+  width: 0%;
+  height: 1px;
+  border-top: 1px solid white;
+  transition: 1s;
+  bottom: 0;
+  left: 0
+}
+a:hover::after{
+  width: 100%;
 }
 .header{
   height: 90px;
-  background: #8a8a8a;
+  background: rgba(138,138,138,.6);
+  position: fixed;
+  z-index: 1000000;
 }
-
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 .inner-width{
-  max-width: 1000px;
-  padding: 0 10px;
-  margin: auto;
-}
-
-.logo{
-  float: left;
-  padding: 20px 0;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .logo img{
-  height: 50px;
+  height: 70px;
 }
 
 .navigation-menu{
-  float: right;
+  width: 40%;
+  float: left;
   display: flex;
   align-items: center;
   min-height: 90px;
 }
 
 .navigation-menu a{
-  margin-left: 10px;
+  margin-left: 3vw;
   color: #ddd;
   text-transform: uppercase;
   font-size: 14px;
   padding: 12px 20px;
   border-radius: 4px;
   transition: .3s linear;
+  width: 33%;
+  text-align:center;
 }
 
 .navigation-menu a:hover{
   background: #fff;
   color: #2f3640;
   transform: scale(1.1);
+  border-bottom: 1px solid red;
 }
 
 .navigation-menu i{
-  margin-right: 8px;
-  font-size: 16px;
+  margin-right: 10px;
+  font-size: 20px;
 }
 
 .home{

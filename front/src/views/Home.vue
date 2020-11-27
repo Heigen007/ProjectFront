@@ -1,18 +1,36 @@
 <template>
   <div class="wrapper">
+    <Carousel :carouselData="carouselData" :interval="5000" />
     <Catalog />
   </div>
 </template>
 
 <script>
+import Carousel from '../components/Carousel.vue'
 import Catalog from '../components/Catalog.vue'
+import axios from 'axios'
 export default {
   name: 'Home',
   components: {
-    Catalog
+    Catalog,
+    Carousel
+  },
+  data: () => ({
+    carouselData: null
+  }),
+  async mounted () {
+    await axios.get('http://localhost:3000/HeaderCarousel')
+      .then(response => {
+        this.carouselData = response.data
+      })
+      .catch(err => {
+        console.log(err)
+      })
   }
 }
 </script>
 
 <style lang="sass" scoped>
+  .wrapper
+    width: 100%
 </style>

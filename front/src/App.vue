@@ -14,16 +14,23 @@ export default {
   components: {
     Header,
     theFooter
+  },
+  data: function () {
+    return {
+      root: 'http://localhost:3000/'
+    }
+  },
+  computed: {},
+  watch: {},
+  async beforeMount () {
   }
 }
 </script>
 
 <style>
 body{
-  background-color: #c0e3ff;
   margin:0;
   padding:0;
-  z-index: 10;
 }
 html{
   font-size: 14px;
