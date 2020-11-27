@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <div class="catalog" v-for="(Catalog, key) in Catalog" :key="key">
-      <img class = "photo item"  :id = "`${key}`" :src = "`../assets/flow.png`">
+      <img class = "photo item"  :id = "`${key}`" :src = "`../assets/Photo1.jpg`">
       <img class = "photo item"  :id = "`${key}`" src = "../assets/flow.png">
     </div>
   </div>
