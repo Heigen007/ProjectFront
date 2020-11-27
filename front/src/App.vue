@@ -20,10 +20,8 @@ export default {
 
 <style>
 body{
-  background-color: #c0e3ff;
   margin:0;
   padding:0;
-  z-index: 10;
 }
 .home{
   display: flex;
