@@ -5,17 +5,16 @@ const Catalog = require('../models/Catalog.js').Catalog
 
 router.get('/', async (req, res) => {
     const result = await Catalog.find().exec()
+    console.log(result)
     res.status(200).send( JSON.stringify(result) )
 })
 
 router.post('/', async (req, res) => {
     try {
         const newItem = new Catalog({
-            images: req.body.images,
-            title: req.body.title,
-            description: req.body.description,
-            colors: req.body.colors,
-            price: req.body.price
+            image: req.body.image,
+            items: req.body.items,
+            title: req.body.title
         })
         const result = await newItem.save()
         res.status(200).send( JSON.stringify( result ) )

@@ -110,5 +110,4 @@ export default {
             img
               width: 26px !important
               height: 26px !important
-
 </style>

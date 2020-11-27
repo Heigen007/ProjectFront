@@ -1,27 +1,50 @@
 const mongoose = require('mongoose')
-const item = new mongoose.Schema({
-    images: {
-        type: Array,
+const CatalogModel = new mongoose.Schema({
+    image: {
+        type: String,
         required: true
     },
     title: {
         type: String,
         required: true
     },
-    description: {
-        type: String,
-        required: true
-    },
-    colors: {
-        type: Array,
-        required: true,
-        min: 5
-    },
-    price: {
-        type: Number,
-        required: true
-    }
+    items: [{
+        image: {
+            type: String,
+            required: true
+        },
+        body: {
+            images: {
+                type: Array,
+                required: true,
+                min: 4
+            },
+            title: {
+                type: String,
+                required: true
+            },
+            description: {
+                type: String,
+                required: true
+            },
+            price: {
+                type: Number,
+                required: true,
+                min: 1000
+            },
+            colors: {
+                type: Array,
+                required: true,
+                min: 4
+            },
+            materials: {
+                type: Array,
+                required: true,
+                min: 4
+            }
+        }
+    }]
 })
 
-const Catalog = mongoose.model('Catalog', item)
+const Catalog = mongoose.model('Catalogs', CatalogModel)
 module.exports = { Catalog }
