@@ -1,7 +1,7 @@
 <template>
   <div class = "header">
     <div class="inner-width">
-      <a href="#"><i class="fas fa-home home"></i> КАТАЛОГ</a>
+      <a href="#"><i class="fas fa-home home"></i> О НАС</a>
       <a href="#"><i class="fas fa-align-left about"></i> КАТАЛОГ</a>
       <router-link to="/">
         <div class="logo"><img src="../assets/flow.png" alt=""></div>
