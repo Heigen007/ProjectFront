@@ -2,18 +2,16 @@
   <div class = "header">
     <div class="inner-width">
       <a href="#"><i class="fas fa-home home"></i> О НАС</a>
-      <a href="#"><i class="fas fa-align-left about"></i> КАТАЛОГ</a>
-      <router-link to="/">
+      <a href="#"><i class="fas fa-align-left about"></i> КОНТАКТЫ</a>
+      <div>
         <div class="logo"><img src="../assets/flow.png" alt=""></div>
-      </router-link>
-      <a href="#"><i class="fas fa-users team"></i> ДОСТАВКА</a>
-      <a href="#"><i class="fas fa-headset contact"></i> КОНТАКТЫ</a>
+      </div>
+      <a href="#"><i class="fas fa-users team"></i> КАТАЛОГ</a>
+      <a href="#"><i class="fas fa-headset contact"></i> ДОСТАВКА</a>
     </div>
   </div>
 </template>
-
 <script>
-
 export default {
   name: 'MainStr',
   props: {
