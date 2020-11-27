@@ -1,9 +1,9 @@
 <template>
 <div class = "reg" v-on:keyup.enter="submit">
-  <div class = "text">Оставьте заявку на просчет дивана</div>
-  <input type="text" id = 'log' autocomplete="off" placeholder="Ваше имя:">
-  <input type="text" id = 'pas' autocomplete="off" placeholder="Ваш телефон:">
-  <input type="text" id = 'pas' autocomplete="off" placeholder="Ваш email:">
+  <div class = "text">Оставьте заявку на просчет продукта</div>
+  <input type="text" id = 'name' autocomplete="off" placeholder="Ваше имя:">
+  <input type="text" id = 'tel' autocomplete="off" placeholder="Ваш телефон:">
+  <input type="text" id = 'email' autocomplete="off" placeholder="Ваш email:">
   <div class = "c"><button class = "but"  @click="click">Оставить</button></div>
   <div class="mistake" v-if="showmi">Введите верный логин и пароль!</div>
 </div>
@@ -12,7 +12,16 @@
 
 <script>
 export default {
-  name: 'Buy'
+  methods: {
+    click () {
+      const dar = document.getElementById('name')
+      dar.value = ''
+      const dar2 = document.getElementById('tel')
+      dar2.value = ''
+      const dar3 = document.getElementById('email')
+      dar3.value = ''
+    }
+  }
 }
 </script>
 
