@@ -8,8 +8,10 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "axios": "^0.21.0",
     "core-js": "^3.6.5",
+    "typeit": "^7.0.4",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
   },

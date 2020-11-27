@@ -41,7 +41,7 @@ export default {
 
 <style lang="sass" scoped>
   .wrapper
-    height: 100vh
+    height: 80vh
     width: 100%
     display: flex
     flex-direction: column
@@ -55,7 +55,6 @@ export default {
       align-items: center
       align-self: center
       height: 60vh
-      border: 1px solid red
       .column
         width: 40%
         height: 100%
@@ -91,7 +90,6 @@ export default {
       display: flex
       justify-content: center
       align-items: flex-end
-      border: 1px solid red
       .bot_wrapper
         width: 80%
         display: flex
