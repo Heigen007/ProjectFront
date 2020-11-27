@@ -55,7 +55,6 @@ export default {
       align-items: center
       align-self: center
       height: 60vh
-      border: 1px solid red
       .column
         width: 40%
         height: 100%
@@ -75,8 +74,8 @@ export default {
         h1,h2,h3
           font-family: Ubuntu,sans-serif,system-ui
           font-weight: 400
-          margin-block-start: 0em 
-          margin-block-end: 0em 
+          margin-block-start: 0em
+          margin-block-end: 0em
       .second_column
           display: flex
           justify-content: center
@@ -91,7 +90,6 @@ export default {
       display: flex
       justify-content: center
       align-items: flex-end
-      border: 1px solid red
       .bot_wrapper
         width: 80%
         display: flex
@@ -112,6 +110,4 @@ export default {
             img
               width: 26px !important
               height: 26px !important
-
-
 </style>

@@ -3,7 +3,7 @@
     <div class="catalogs"
       v-for="catalog in Catalogs"
       :key="catalog.title">
-      <router-link :to="`/${Catalog.id}`" class="catalogTile" :style="{background: 'url(' + require('../assets/' + catalog.image) + ') center no-repeat'}">
+      <router-link :to="`/${Catalogs.id}`" class="catalogTile" :style="{background: 'url(' + require('../assets/' + catalog.image) + ') center no-repeat'}">
         <div class="title">{{ catalog.title }}</div>
       </router-link>
     </div>

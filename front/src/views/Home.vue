@@ -2,18 +2,21 @@
   <div class="wrapper">
     <Carousel :carouselData="carouselData" :interval="5000" />
     <Catalog />
+    <Delivery />
   </div>
 </template>
 
 <script>
 import Carousel from '../components/Carousel.vue'
 import Catalog from '../components/Catalog.vue'
+import Delivery from '../components/Delivery.vue'
 import axios from 'axios'
 export default {
   name: 'Home',
   components: {
     Catalog,
-    Carousel
+    Carousel,
+    Delivery
   },
   data: () => ({
     carouselData: null
