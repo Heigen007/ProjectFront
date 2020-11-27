@@ -15,7 +15,7 @@ router.post('/', async (req, res) => {
             title: req.body.title,
             description: req.body.description,
             colors: req.body.colors,
-            
+            price: req.body.price
         })
         const result = await newItem.save()
         res.status(200).send( JSON.stringify( result ) )

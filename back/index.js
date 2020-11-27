@@ -34,6 +34,7 @@ async function init(serverData) {
         })
 
         app.use('/Catalog', require('./endPoints/Catalog.js'))
+        app.use('/HeaderCarousel', require('./endPoints/HeaderCarousel.js'))
     })
     mongoose.connection.emit('open')
 }
