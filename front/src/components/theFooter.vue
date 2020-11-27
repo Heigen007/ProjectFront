@@ -75,8 +75,8 @@ export default {
         h1,h2,h3
           font-family: Ubuntu,sans-serif,system-ui
           font-weight: 400
-          margin-block-start: 0em 
-          margin-block-end: 0em 
+          margin-block-start: 0em
+          margin-block-end: 0em
       .second_column
           display: flex
           justify-content: center
@@ -112,6 +112,4 @@ export default {
             img
               width: 26px !important
               height: 26px !important
-
-
 </style>
