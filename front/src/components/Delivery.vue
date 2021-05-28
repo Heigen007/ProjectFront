@@ -30,7 +30,7 @@ export default {
 
 <style lang="sass" scoped>
   .wrapper
-    height: 50vh
+    height: 70vh
     width: 100vw
     background-color: #F4F4F4
     text-align: center
