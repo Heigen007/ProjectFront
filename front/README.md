@@ -1,5 +1,5 @@
 # front
-
+OpenSource Furniture Shop, from hackathon made with Vue/Express/Mongo.db
 ## Project setup
 ```
 npm install
